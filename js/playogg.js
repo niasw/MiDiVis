@@ -18,3 +18,8 @@ function stopkey(idx) {
 //  aus[-idx+15].pause();aus[-idx+15].currentTime=0;
  }
 }
+function playmetro() {
+ var au=d3.select('audio.metro')[0][0];
+ au.volume=0.18;au.currentTime=0;au.play();
+}
+

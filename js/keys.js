@@ -19,6 +19,7 @@ function autobarSet(period) {
 function createbarline() {
  d3.select('svg').append('line').attr('class','barline')
    .attr('x1',wid-pianow).attr('x2',wid-pianow).attr('y1',1).attr('y2',hgh-1);
+ playmetro();
 }
 var keybinddata; // key bindings
 d3.json('res/keybind.json',function(error,data) {
