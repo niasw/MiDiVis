@@ -44,8 +44,8 @@ function keyplay(event) {
   }
   barTimeStart=barTimeFinal;
  } else {
-console.log(event.keyCode+String.fromCharCode(event.keyCode));
   var idx = key2idx(event.keyCode);
+  playkey(idx);
   if (idx>0&&!keyStatew[idx-1]) {
    keyStatew[idx-1]=true;
    d3.select('svg').append('rect').attr('class','notew press')
@@ -66,6 +66,7 @@ function keystop(event) {
   keyStates[0]=false;
  } else {
   var idx = key2idx(event.keyCode);
+  stopkey(idx);
   if (idx>0&&keyStatew[idx-1]) {
    keyStatew[idx-1]=false;
    var rects = d3.selectAll('rect.notew.press')[0];

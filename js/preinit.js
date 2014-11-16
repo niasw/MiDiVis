@@ -12,6 +12,8 @@ var blackaux=[0,1,3,4,5]; // auxiliary array to render black key
 var numofoct=3; // number of octaves
 var driftspd=5; // 5px/50ms
 var refreshT=50; // 1frame/50ms
+var freemode=true; // play keyboard piano
+var source=''; // this is for MIDI json file playing (TODO)
 // function declaration
 function drawinit() {
  d3.select('body').append('div').attr('class','wrapper').attr('id','canvas')

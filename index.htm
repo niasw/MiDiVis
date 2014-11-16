@@ -12,13 +12,14 @@
  <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
  <script src="lib/d3.min.js"></script>
  <script src="js/preinit.js"></script>
+ <script src="js/playogg.js"></script>
  <script src="js/keys.js"></script>
  <script src="js/drift.js"></script>
- <div class="wrapper"><form class="center" name="formmidsrc" style="width:700px;text-align:center;line-height:10pt;padding:0;">
-  <input type="radio" name="midsrc" onclick="javascript:source='';" checked="checked"/>Free
-  <input type="radio" name="midsrc" onclick="javascript:source='example/data/demo1.mid';"/>Music 1
+ <!--<div class="wrapper"><form class="center" name="formmidsrc" style="width:700px;text-align:center;line-height:10pt;padding:0;">
+  <input type="radio" name="midsrc" onclick="javascript:source='';freemode=true;" checked="checked"/>Free
+  <input type="radio" name="midsrc" onclick="javascript:source='example/data/canon.json';freemode=false;"/>Music 1-->
   <!--<input type="radio" name="midsrc" onclick="javascript:;"/>Record-->
- </form></div>
+ <!--</form></div>-->
  <!--<div class="wrapper"><form class="center" name="formrecnam" style="width:700px;text-align:center;line-height:10pt;padding:0;">
   Record File Name = <input type="text" value="example/data/1.mid" id="recnam" onkeydown="javascript:if (event.keyCode==13) {this.select();this.blur();}"/>
   <input type="button" value="Record" onclick="javascript:;"/>
@@ -26,7 +27,112 @@
  <div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onclick="javascript:driftTrigger();">Click Here to Trigger Drifting.</a></div>
  <div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onclick="javascript:;" onkeydown="javascript:keyplay(event);" onkeyup="javascript:keystop(event);">Focus Here to Enable Key Sound.</a></div>
  <!--<div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onmousedown="javascript:setvols(event);" onmouseup="javascript:setvolf(event);">Pull Left and Right to Adjust Intensity.</a></div>-->
- <div class="hide">
+ <div class="audio">
+  <audio class="white" src="res/ogg/A-1.ogg"/>
+  <audio class="white" src="res/ogg/B-1.ogg"/>
+
+  <audio class="white" src="res/ogg/C0.ogg"/>
+  <audio class="white" src="res/ogg/D0.ogg"/>
+  <audio class="white" src="res/ogg/E0.ogg"/>
+  <audio class="white" src="res/ogg/F0.ogg"/>
+  <audio class="white" src="res/ogg/G0.ogg"/>
+  <audio class="white" src="res/ogg/A0.ogg"/>
+  <audio class="white" src="res/ogg/B0.ogg"/>
+
+  <audio class="white" src="res/ogg/C1.ogg"/>
+  <audio class="white" src="res/ogg/D1.ogg"/>
+  <audio class="white" src="res/ogg/E1.ogg"/>
+  <audio class="white" src="res/ogg/F1.ogg"/>
+  <audio class="white" src="res/ogg/G1.ogg"/>
+  <audio class="white" src="res/ogg/A1.ogg"/>
+  <audio class="white" src="res/ogg/B1.ogg"/>
+
+  <audio class="white" src="res/ogg/C2.ogg"/>
+  <audio class="white" src="res/ogg/D2.ogg"/>
+  <audio class="white" src="res/ogg/E2.ogg"/>
+  <audio class="white" src="res/ogg/F2.ogg"/>
+  <audio class="white" src="res/ogg/G2.ogg"/>
+  <audio class="white" src="res/ogg/A2.ogg"/>
+  <audio class="white" src="res/ogg/B2.ogg"/>
+
+  <audio class="white" src="res/ogg/C3.ogg"/>
+  <audio class="white" src="res/ogg/D3.ogg"/>
+  <audio class="white" src="res/ogg/E3.ogg"/>
+  <audio class="white" src="res/ogg/F3.ogg"/>
+  <audio class="white" src="res/ogg/G3.ogg"/>
+  <audio class="white" src="res/ogg/A3.ogg"/>
+  <audio class="white" src="res/ogg/B3.ogg"/>
+
+  <audio class="white" src="res/ogg/C4.ogg"/>
+  <audio class="white" src="res/ogg/D4.ogg"/>
+  <audio class="white" src="res/ogg/E4.ogg"/>
+  <audio class="white" src="res/ogg/F4.ogg"/>
+  <audio class="white" src="res/ogg/G4.ogg"/>
+  <audio class="white" src="res/ogg/A4.ogg"/>
+  <audio class="white" src="res/ogg/B4.ogg"/>
+
+  <audio class="white" src="res/ogg/C5.ogg"/>
+  <audio class="white" src="res/ogg/D5.ogg"/>
+  <audio class="white" src="res/ogg/E5.ogg"/>
+  <audio class="white" src="res/ogg/F5.ogg"/>
+  <audio class="white" src="res/ogg/G5.ogg"/>
+  <audio class="white" src="res/ogg/A5.ogg"/>
+  <audio class="white" src="res/ogg/B5.ogg"/>
+
+  <audio class="white" src="res/ogg/C6.ogg"/>
+  <audio class="white" src="res/ogg/D6.ogg"/>
+  <audio class="white" src="res/ogg/E6.ogg"/>
+  <audio class="white" src="res/ogg/F6.ogg"/>
+  <audio class="white" src="res/ogg/G6.ogg"/>
+  <audio class="white" src="res/ogg/A6.ogg"/>
+  <audio class="white" src="res/ogg/B6.ogg"/>
+
+  <audio class="white" src="res/ogg/C7.ogg"/>
+ </div>
+ <div class="audio">
+  <audio class="black" src="res/ogg/As-1.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs0.ogg"/>
+  <audio class="black" src="res/ogg/Ds0.ogg"/>
+  <audio class="black" src="res/ogg/Fs0.ogg"/>
+  <audio class="black" src="res/ogg/Gs0.ogg"/>
+  <audio class="black" src="res/ogg/As0.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs1.ogg"/>
+  <audio class="black" src="res/ogg/Ds1.ogg"/>
+  <audio class="black" src="res/ogg/Fs1.ogg"/>
+  <audio class="black" src="res/ogg/Gs1.ogg"/>
+  <audio class="black" src="res/ogg/As1.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs2.ogg"/>
+  <audio class="black" src="res/ogg/Ds2.ogg"/>
+  <audio class="black" src="res/ogg/Fs2.ogg"/>
+  <audio class="black" src="res/ogg/Gs2.ogg"/>
+  <audio class="black" src="res/ogg/As2.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs3.ogg"/>
+  <audio class="black" src="res/ogg/Ds3.ogg"/>
+  <audio class="black" src="res/ogg/Fs3.ogg"/>
+  <audio class="black" src="res/ogg/Gs3.ogg"/>
+  <audio class="black" src="res/ogg/As3.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs4.ogg"/>
+  <audio class="black" src="res/ogg/Ds4.ogg"/>
+  <audio class="black" src="res/ogg/Fs4.ogg"/>
+  <audio class="black" src="res/ogg/Gs4.ogg"/>
+  <audio class="black" src="res/ogg/As4.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs5.ogg"/>
+  <audio class="black" src="res/ogg/Ds5.ogg"/>
+  <audio class="black" src="res/ogg/Fs5.ogg"/>
+  <audio class="black" src="res/ogg/Gs5.ogg"/>
+  <audio class="black" src="res/ogg/As5.ogg"/>
+
+  <audio class="black" src="res/ogg/Cs6.ogg"/>
+  <audio class="black" src="res/ogg/Ds6.ogg"/>
+  <audio class="black" src="res/ogg/Fs6.ogg"/>
+  <audio class="black" src="res/ogg/Gs6.ogg"/>
+  <audio class="black" src="res/ogg/As6.ogg"/>
  </div>
  <script src="js/main.js"></script>
 </body></html>
