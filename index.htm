@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html><head>
+ <meta charset="gbk">
+ <meta name="author" content="Sun Sibai & Liu Yu">
+ <meta name="keywords" content="midi visualize">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+ <link rel="license" href="Apache License 2.0">
+ <link rel="icon" href="res/icon.png">
+ <title>MiDiVis --- Recall your Music in Memory, Type the Keyboard, Then Get the Music Score</title>
+</head><body>
+ <div class="wrapper"><p class="center" style="width:700px;text-align:left;line-height:1pt;padding:0;"><b>MiDiVis</b></p><p class="center" style="width:700px;text-align:right;line-height:1pt;padding:0 0 10px 0;">@author <i>Sun Sibai</i> &amp; <i>Liu Yu</i></p></div>
+ <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+ <script src="lib/d3.min.js"></script>
+ <script src="js/preinit.js"></script>
+ <script src="js/keys.js"></script>
+ <script src="js/drift.js"></script>
+ <div class="wrapper"><form class="center" name="formmidsrc" style="width:700px;text-align:center;line-height:10pt;padding:0;">
+  <input type="radio" name="midsrc" onclick="javascript:source='';" checked="checked"/>Free
+  <input type="radio" name="midsrc" onclick="javascript:source='example/data/demo1.mid';"/>Music 1
+  <!--<input type="radio" name="midsrc" onclick="javascript:;"/>Record-->
+ </form></div>
+ <!--<div class="wrapper"><form class="center" name="formrecnam" style="width:700px;text-align:center;line-height:10pt;padding:0;">
+  Record File Name = <input type="text" value="example/data/1.mid" id="recnam" onkeydown="javascript:if (event.keyCode==13) {this.select();this.blur();}"/>
+  <input type="button" value="Record" onclick="javascript:;"/>
+ </form></div>-->
+ <div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onclick="javascript:driftTrigger();">Click Here to Trigger Drifting.</a></div>
+ <div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onclick="javascript:;" onkeydown="javascript:keyplay(event);" onkeyup="javascript:keystop(event);">Focus Here to Enable Key Sound.</a></div>
+ <!--<div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onmousedown="javascript:setvols(event);" onmouseup="javascript:setvolf(event);">Pull Left and Right to Adjust Intensity.</a></div>-->
+ <div class="hide">
+ </div>
+ <script src="js/main.js"></script>
+</body></html>
