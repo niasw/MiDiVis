@@ -101,4 +101,19 @@ svg.chart polygon.noteb {
  stroke: rgba(80, 40, 0, .8);
  stroke-width: 1pt;
 }
+svg.chart rect.statw,
+svg.chart polygon.statw,
+svg.chart rect.statb,
+svg.chart polygon.statb {
+ fill: rgba(255, 255, 170, 1);
+ stroke: none;
+}
+svg.chart rect.statwo,
+svg.chart polygon.statwo,
+svg.chart rect.statbo,
+svg.chart polygon.statbo {
+ fill: none;
+ stroke: rgba(80, 40, 0, 1);
+ stroke-width: 2pt;
+}
 

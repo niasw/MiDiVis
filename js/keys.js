@@ -7,8 +7,8 @@ var barTimeFinal;
 var keyStatew=new Array(numofoct*7); // if keypressing
 var keyStateb=new Array(numofoct*5); // if keypressing
 var keyStates=[false];
-for (s in keyStatew) {keyStatew[s]=false;}
-for (s in keyStateb) {keyStateb[s]=false;}
+for (var s=0;s<numofoct*7;s+=1) {keyStatew[s]=false;}
+for (var s=0;s<numofoct*5;s+=1) {keyStateb[s]=false;}
 function autobarSet(period) {
  if (driftInterval) {
   clearInterval(autobarInterval);
@@ -17,7 +17,7 @@ function autobarSet(period) {
  autobarInterval=setInterval('createbarline();',period);
 }
 function createbarline() {
- d3.select('svg').append('line').attr('class','barline')
+ d3.select('svg').insert('line',':first-child').attr('class','barline')
    .attr('x1',wid-pianow).attr('x2',wid-pianow).attr('y1',1).attr('y2',hgh-1);
  playmetro();
 }
@@ -37,7 +37,7 @@ function key2idx(keyCode) { // return positive+1 value means white panel, negati
 function keyplay(event) {
  if (event.keyCode==32&&!keyStates[0]) {
   keyStates[0]=true;
-  d3.select('svg').append('line').attr('class','barline')
+  d3.select('svg').insert('line',':first-child').attr('class','barline')
     .attr('x1',wid-pianow).attr('x2',wid-pianow).attr('y1',1).attr('y2',hgh-1);
   barTimeFinal=(new Date()).getTime();
   if (barTimeStart) {
@@ -49,12 +49,12 @@ function keyplay(event) {
   playkey(idx);
   if (idx>0&&!keyStatew[idx-1]) {
    keyStatew[idx-1]=true;
-   d3.select('svg').append('rect').attr('class','notew press')
+   d3.select('svg').insert('rect',':first-child').attr('class','notew press')
      .attr('x',wid-pianow).attr('width',1).attr('height',keywwid)
      .attr('y',idx2posw(idx-1));
   } else if (idx<0&&!keyStateb[-idx-1]) {
    keyStateb[-idx-1]=true;
-   d3.select('svg').append('rect').attr('class','noteb press')
+   d3.select('svg').insert('rect',':first-child').attr('class','noteb press')
      .attr('x',wid-pianow).attr('width',1).attr('height',keybwid)
      .attr('y',idx2posb(-idx-1));
   }

@@ -49,3 +49,21 @@ function drawkeys() {
    .attr('x',wid-pianow).attr('width',pianow/2-1).attr('height',keybwid)
    .attr('y',function (d,i) {return idx2posb(i);});
 }
+function drawstat() { // statistics
+ d3.select('svg').selectAll('rect.statw').data(new Array(numofoct*7)).enter()
+   .append('rect').attr('class','statw')
+   .attr('x',1).attr('width',pianow-1).attr('height',keywwid)
+   .attr('y',function (d,i) {return idx2posw(i);});
+ d3.select('svg').selectAll('rect.statwo').data(new Array(numofoct*7)).enter()
+   .append('rect').attr('class','statwo')
+   .attr('x',1).attr('width',pianow-1).attr('height',keywwid)
+   .attr('y',function (d,i) {return idx2posw(i);});
+ d3.select('svg').selectAll('rect.statb').data(new Array(numofoct*5)).enter()
+   .append('rect').attr('class','statb')
+   .attr('x',1).attr('width',pianow/2-1).attr('height',keybwid)
+   .attr('y',function (d,i) {return idx2posb(i);});
+ d3.select('svg').selectAll('rect.statbo').data(new Array(numofoct*5)).enter()
+   .append('rect').attr('class','statbo')
+   .attr('x',1).attr('width',pianow/2-1).attr('height',keybwid)
+   .attr('y',function (d,i) {return idx2posb(i);});
+}
