@@ -39,7 +39,6 @@ function extend(note) {
  note.setAttribute('width',w);
 }
 function updatenotes() {
-console.log(statkeyw);
  var ns=d3.selectAll('rect.notew')[0];
  for (n in ns) {drift(ns[n]);}
  ns=d3.selectAll('rect.noteb')[0];
@@ -48,16 +47,15 @@ console.log(statkeyw);
  for (n in ns) {driftbarline(ns[n]);}
  ns=d3.selectAll('rect.press')[0];
  for (n in ns) {extend(ns[n]);}
+ var sum=0.01;
+ for (st in statkeyw) {sum+=statkeyw[st];}
+ for (st in statkeyb) {sum+=statkeyb[st];}
  ns=d3.selectAll('rect.statw');
  ns.data(statkeyw);
- var sumw=0.01;
- for (st in statkeyw) {sumw+=statkeyw[st];}
- ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*statkeyw[i]/sumw)+","+Math.round(255-(255-40)*statkeyw[i]/sumw)+","+Math.round(170-(170-0)*statkeyw[i]/sumw)+")";});
+ ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*statkeyw[i]/sum)+","+Math.round(255-(255-40)*statkeyw[i]/sum)+","+Math.round(170-(170-0)*statkeyw[i]/sum)+")";});
  ns=d3.selectAll('rect.statb');
  ns.data(statkeyb);
- var sumb=0.01;
- for (st in statkeyb) {sumb+=statkeyb[st];}
- ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*statkeyb[i]/sumb)+","+Math.round(255-(255-40)*statkeyb[i]/sumb)+","+Math.round(170-(170-0)*statkeyb[i]/sumb)+")";});
+ ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*statkeyb[i]/sum)+","+Math.round(255-(255-40)*statkeyb[i]/sum)+","+Math.round(170-(170-0)*statkeyb[i]/sum)+")";});
 }
 function driftTrigger() {
  if (driftInterval) {
