@@ -52,10 +52,10 @@ function updatenotes() {
  for (st in statkeyb) {sum+=statkeyb[st];}
  ns=d3.selectAll('rect.statw');
  ns.data(statkeyw);
- ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*statkeyw[i]/sum)+","+Math.round(255-(255-40)*statkeyw[i]/sum)+","+Math.round(170-(170-0)*statkeyw[i]/sum)+")";});
+ ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*Math.sqrt(statkeyw[i]/sum))+","+Math.round(255-(255-40)*Math.sqrt(statkeyw[i]/sum))+","+Math.round(170-(170-0)*Math.sqrt(statkeyw[i]/sum))+")";});
  ns=d3.selectAll('rect.statb');
  ns.data(statkeyb);
- ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*statkeyb[i]/sum)+","+Math.round(255-(255-40)*statkeyb[i]/sum)+","+Math.round(170-(170-0)*statkeyb[i]/sum)+")";});
+ ns.attr('style',function (d,i) {return "fill:rgb("+Math.round(255-(255-80)*Math.sqrt(statkeyb[i]/sum))+","+Math.round(255-(255-40)*Math.sqrt(statkeyb[i]/sum))+","+Math.round(170-(170-0)*Math.sqrt(statkeyb[i]/sum))+")";});
 }
 function driftTrigger() {
  if (driftInterval) {
