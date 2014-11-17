@@ -24,11 +24,11 @@ Copyright 2014 Sun Sibai <niasw(AT)pku.edu.cn> & Liu Yu <caspervector(AT)gmail.c
 
 ##Keyboard Binding
 
-|`Space Bar`|bar line (hit it twice, then generate automatically)|
-|`Q`~`]`|white key: C3~G4|
-|`2`~`=`|black key: C#3~Gb4|
-|`Z`~`.`|white key: A4~B5|
-|`A`~`L`|black key: Ab4~Bb5|
+||`Space Bar`||bar line (hit it twice, then generate automatically)||
+||`Q`~`]`||white key: C3~G4||
+||`2`~`=`||black key: C#3~Gb4||
+||`Z`~`.`||white key: A4~B5||
+||`A`~`L`||black key: Ab4~Bb5||
 
 * Click `Click Here to Trigger Drifting.` to Start Timeline.
 * Click `Focus Here to Enable Key Sound.` to Start KeyBinding.
