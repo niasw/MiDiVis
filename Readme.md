@@ -24,11 +24,24 @@ Copyright 2014 Sun Sibai <niasw(AT)pku.edu.cn> & Liu Yu <caspervector(AT)gmail.c
 
 ##Keyboard Binding
 
-||`Space Bar`||bar line (hit it twice, then generate automatically)||
-||`Q`~`]`||white key: C3~G4||
-||`2`~`=`||black key: C#3~Gb4||
-||`Z`~`.`||white key: A4~B5||
-||`A`~`L`||black key: Ab4~Bb5||
+<table>
+ <tr>
+  <th><b style="font-family:Courier, monospace;">Space Bar</b></th>
+  <td>bar line (hit it twice, then generate automatically)</td>
+ </tr><tr>
+  <th><b style="font-family:Courier, monospace;">Q</b> - <b style="font-family:Courier, monospace;">]</b></th>
+  <td>white key: C3 - G4</td>
+ </tr><tr>
+  <th><b style="font-family:Courier, monospace;">2</b> - <b style="font-family:Courier, monospace;">=</b></th>
+  <td>black key: C#3 - Gb4</td>
+ </tr><tr>
+  <th><b style="font-family:Courier, monospace;">Z</b> - <b style="font-family:Courier, monospace;">.</b></th>
+  <td>white key: A4 - B5</td>
+ </tr><tr>
+  <th><b style="font-family:Courier, monospace;">A</b> - <b style="font-family:Courier, monospace;">L</b></th>
+  <td>black key: Ab4 - Bb5</td>
+ </tr>
+</table>
 
 * Click `Click Here to Trigger Drifting.` to Start Timeline.
 * Click `Focus Here to Enable Key Sound.` to Start KeyBinding.
