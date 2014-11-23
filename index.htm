@@ -7,7 +7,7 @@
  <link rel="license" href="Apache License 2.0">
  <link rel="icon" href="res/icon.png">
  <title>MiDiVis --- Recall your Music in Memory, Type the Keyboard, Then Get the Music Score</title>
-</head><body>
+</head><body onkeydown="javascript:keyplay(event);" onkeyup="javascript:keystop(event);">
  <div class="wrapper"><p class="center" style="width:700px;text-align:left;line-height:1pt;padding:0;"><b>MiDiVis</b></p><p class="center" style="width:700px;text-align:right;line-height:1pt;padding:0 0 10px 0;">@author <i>Sun Sibai</i> &amp; <i>Liu Yu</i></p></div>
  <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
  <script src="lib/d3.min.js"></script>
@@ -25,7 +25,6 @@
   <input type="button" value="Record" onclick="javascript:;"/>
  </form></div>-->
  <div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onclick="javascript:driftTrigger();">Click Here to Trigger Drifting.</a></div>
- <div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onclick="javascript:;" onkeydown="javascript:keyplay(event);" onkeyup="javascript:keystop(event);">Focus Here to Enable Key Sound.</a></div>
  <!--<div class="wrapper"><a class="center" style="width:700px;text-align:center;line-height:10pt;padding:0;" href="#" onmousedown="javascript:setvols(event);" onmouseup="javascript:setvolf(event);">Pull Left and Right to Adjust Intensity.</a></div>-->
  <div class="audio">
   <audio class="white" src="res/ogg/A-1.ogg"/>
